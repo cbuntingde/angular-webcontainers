@@ -64,10 +64,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/angular-webcontainers.git"
+    "url": "https://github.com/cbuntingde/angular-webcontainers.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/angular-webcontainers/issues"
+    "url": "https://github.com/cbuntingde/angular-webcontainers/issues"
   },
   "homepage": "https://angular-webcontainer.modelize.dev/"
 }

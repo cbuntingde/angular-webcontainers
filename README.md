@@ -72,7 +72,7 @@ angular-webcontainers/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/angular-webcontainers.git
+git clone https://github.com/cbuntingde/angular-webcontainers.git
 cd angular-webcontainers
 
 # Install dependencies
@@ -248,7 +248,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Live Demo**: [https://angular-webcontainer.modelize.dev/](https://angular-webcontainer.modelize.dev/)
 - **StackBlitz**: [https://stackblitz.com/your-project](https://stackblitz.com/your-project)
-- **GitHub**: [https://github.com/your-username/angular-webcontainers](https://github.com/your-username/angular-webcontainers)
+- **GitHub**: [https://github.com/cbuntingde/angular-webcontainers](https://github.com/cbuntingde/angular-webcontainers)
 
 ---
 
