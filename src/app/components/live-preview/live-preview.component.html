@@ -1,0 +1,64 @@
+<div class="live-preview-section">
+  <h2>Live Code Examples</h2>
+  <p>Click on the tabs below to see different Angular code examples</p>
+  
+  <div class="code-examples">
+    <div class="example-tabs">
+      <button 
+        *ngFor="let example of examples; let i = index"
+        class="tab-button"
+        [class.active]="selectedExample === i"
+        (click)="selectExample(i)">
+        {{example.title}}
+      </button>
+    </div>
+    
+    <div class="example-content" *ngIf="examples[selectedExample]">
+      <div class="code-header">
+        <span class="language-badge">{{examples[selectedExample].language}}</span>
+        <div class="code-actions">
+          <button class="action-button" (click)="copyCode()">Copy</button>
+          <button class="action-button" (click)="runCode()" [disabled]="isRunning">Run</button>
+        </div>
+      </div>
+      <pre class="code-block"><code>{{examples[selectedExample].code}}</code></pre>
+      
+      <!-- Code Output Display -->
+      <div class="code-output" *ngIf="showOutput">
+        <div class="output-header">
+          <span class="output-title">Output:</span>
+          <button class="output-close" (click)="clearOutput()">×</button>
+        </div>
+        <div class="output-content">
+          <div class="output-status" [class.output-success]="!outputError" [class.output-error]="outputError">
+            {{outputError ? '❌ Error' : '✅ Success'}}
+          </div>
+          <pre class="output-text">{{outputText}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="webcontainer-info">
+    <h3>🌐 Running in WebContainers</h3>
+    <p>This entire Angular application is running inside a WebContainer - a secure, sandboxed Node.js environment that operates entirely within your browser. No backend server required!</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <strong>⚡ Instant Startup</strong>
+        <p>No installation or setup required</p>
+      </div>
+      <div class="info-item">
+        <strong>🔒 Secure</strong>
+        <p>Sandboxed environment protects your system</p>
+      </div>
+      <div class="info-item">
+        <strong>🔄 Live Updates</strong>
+        <p>Changes appear instantly as you code</p>
+      </div>
+      <div class="info-item">
+        <strong>📱 Cross-Platform</strong>
+        <p>Works on any modern browser</p>
+      </div>
+    </div>
+  </div>
+</div>

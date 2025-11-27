@@ -1,0 +1,24 @@
+<div class="demo-app">
+  <app-header></app-header>
+  
+  <div class="container">
+    <div class="demo-card">
+      <h2>Welcome to Angular WebContainers Demo</h2>
+      <p>This is a live Angular application running entirely in your browser using StackBlitz WebContainers technology.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{feature.icon}}</div>
+          <div class="feature-title">{{feature.title}}</div>
+          <div class="feature-description">{{feature.description}}</div>
+        </div>
+      </div>
+    </div>
+
+    <app-interactive-demo></app-interactive-demo>
+    
+    <app-live-preview [examples]="codeExamples"></app-live-preview>
+    
+    <app-feature-cards></app-feature-cards>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="interactive-demo">
+  <h2>Interactive Angular Components</h2>
+  <p>Try these live Angular components - they're running entirely in your browser!</p>
+  
+  <div class="demo-grid">
+    <!-- Counter Demo -->
+    <div class="demo-card">
+      <h3>Counter Component</h3>
+      <div class="counter-display" [style.background-color]="selectedColor">
+        <span class="counter-value">{{counter}}</span>
+      </div>
+      <div class="counter-controls">
+        <button (click)="decrement()" [disabled]="counter === 0">-</button>
+        <button (click)="reset()">Reset</button>
+        <button (click)="increment()">+</button>
+      </div>
+      <div class="color-picker">
+        <span>Color:</span>
+        <div class="color-options">
+          <div 
+            *ngFor="let color of colors" 
+            class="color-option" 
+            [style.background-color]="color"
+            [class.selected]="color === selectedColor"
+            (click)="onColorChange(color)">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Todo List Demo -->
+    <div class="demo-card">
+      <h3>Todo List Component</h3>
+      <div class="todo-input">
+        <input 
+          type="text" 
+          [(ngModel)]="newItem" 
+          (keyup.enter)="addItem()"
+          placeholder="Add a new item..."
+          class="todo-field">
+        <button (click)="addItem()" [disabled]="!newItem.trim()">Add</button>
+      </div>
+      <div class="todo-list">
+        <div class="todo-item" *ngFor="let item of todoItems; let i = index">
+          <span>{{item}}</span>
+          <button class="remove-btn" (click)="removeItem(i)">×</button>
+        </div>
+        <div class="empty-state" *ngIf="todoItems.length === 0">
+          <p>No items yet. Add one above!</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Two-way Binding Demo -->
+    <div class="demo-card">
+      <h3>Two-way Data Binding</h3>
+      <div class="binding-demo">
+        <input 
+          type="text" 
+          [(ngModel)]="userInput" 
+          placeholder="Type something..."
+          class="binding-input">
+        <div class="binding-output">
+          <strong>You typed:</strong> {{userInput || 'Nothing yet...'}}
+        </div>
+        <div class="binding-stats">
+          <small>Character count: {{userInput.length}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="features-section">
+  <h2>WebContainers Features</h2>
+  <p class="section-description">Explore the powerful capabilities of WebContainers technology</p>
+  
+  <div class="features-grid">
+    <div class="feature-detail-card" *ngFor="let feature of webcontainerFeatures">
+      <div class="feature-header">
+        <div class="feature-icon-large">{{feature.icon}}</div>
+        <h3>{{feature.title}}</h3>
+      </div>
+      <p class="feature-description">{{feature.description}}</p>
+      <ul class="feature-details">
+        <li *ngFor="let detail of feature.details">{{detail}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
